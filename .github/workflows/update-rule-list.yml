@@ -26,7 +26,7 @@ jobs:
         DATE_COMMENT="Updated on: $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
         curl -o china-list.txt https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/china-list.txt
         sed -i "1s|^|## $DATE_COMMENT\n|" china-list.txt
-        sed -i '2,$ {
+        sed -i '2,$ {\
           /^full:/ s/^full:/DOMAIN,/
           /^regexp:/ s/^regexp:/URL-REGEX,/
           !/^full:/ && !/^regexp:/ s/^/DOMAIN-SUFFIX,/
@@ -37,7 +37,7 @@ jobs:
         DATE_COMMENT="Updated on: $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
         curl -o proxy-list.txt https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/proxy-list.txt
         sed -i "1s|^|## $DATE_COMMENT\n|" proxy-list.txt
-        sed -i '2,$ {
+        sed -i '2,$ {\
           /^full:/ s/^full:/DOMAIN,/
           /^regexp:/ s/^regexp:/URL-REGEX,/
           !/^full:/ && !/^regexp:/ s/^/DOMAIN-SUFFIX,/
@@ -48,7 +48,7 @@ jobs:
         DATE_COMMENT="Updated on: $(date -u +"%Y-%m-%d %H:%M:%S UTC")"
         curl -o reject-list.txt https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/reject-list.txt
         sed -i "1s|^|## $DATE_COMMENT\n|" reject-list.txt
-        sed -i '2,$ {
+        sed -i '2,$ {\
           /^full:/ s/^full:/DOMAIN,/
           /^regexp:/ s/^regexp:/URL-REGEX,/
           !/^full:/ && !/^regexp:/ s/^/DOMAIN-SUFFIX,/
