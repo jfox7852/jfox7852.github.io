@@ -1,12 +1,12 @@
 name: Update Rule List
 
 on:
-  push:
-    branches:
-      - main
+#  push:
+#    branches:
+#      - main
   workflow_dispatch:
   schedule:
-    - cron: "0 1 * * *"
+    - cron: '10 1 * * *'
 
 jobs:
   update-lists:
