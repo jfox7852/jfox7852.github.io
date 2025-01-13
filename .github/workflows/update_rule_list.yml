@@ -49,4 +49,4 @@ jobs:
       run: |
         git add china-list.txt proxy-list.txt reject-list.txt
         git commit -m "Update Rule List"
-        git push origin main  # 或者你的主要分支
+        git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main
